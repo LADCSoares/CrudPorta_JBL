@@ -1,20 +1,24 @@
-<?php
-// faz conexao com o banco
-include("conecta.php");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Crud Porta</title>
+</head>
+<body>
+    
+   
+</body>
 
-$nome = $_POST["nome"];
-$cpf = $_POST["cpf"];
-$cargo = $_POST["cargo"];
-$telefone = $_POST["telefone"];
-$id_Item = "";
 
-$sql = "INSERT INTO funcionario (nome, cpf, cargo, telefone, id_Item) VALUES ('$nome', $cpf, '$cargo', $telefone, $id_Item)"; // pede para inserir em tal tabela no banco
-$resultado = mysqli_query($conexao, $sql);
-
-if ($resultado == true) {
-    header("Location: consultarReg.php?result=true");
-} else {
-    header("Location: consultarReg.php?result=false");
-}
-
-?>
+</html>
+ <!--JavaScript at end of body for optimized loading-->
+ <script type="text/javascript" src="js/materialize.min.js"></script>
