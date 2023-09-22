@@ -1,0 +1,20 @@
+<?php
+// faz conexao com o banco
+include("conecta.php");
+
+$nome = $_POST["nome"];
+$cpf = $_POST["cpf"];
+$cargo = $_POST["cargo"];
+$telefone = $_POST["telefone"];
+$id_Item = "";
+
+$sql = "INSERT INTO funcionario (nome, cpf, cargo, telefone, id_Item) VALUES ('$nome', $cpf, '$cargo', $telefone, $id_Item)"; // pede para inserir em tal tabela no banco
+$resultado = mysqli_query($conexao, $sql);
+
+if ($resultado == true) {
+    header("Location: consultarReg.php?result=true");
+} else {
+    header("Location: consultarReg.php?result=false");
+}
+
+?>
