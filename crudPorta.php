@@ -84,7 +84,7 @@
           echo "<td>" . $modelo . "</td>";
           echo "<td>" . $valor . "</td>";
 
-          echo "<td>  <a href= 'formAtual.php?id=$id' class='btn-floating waves-effect waves-light #ffb300 amber darken-1'> <i class='material-icons'>mode_edit</i></a> </td>";
+          echo "<td>  <a href= 'formAtualPorta.php?id=$id' class='btn-floating waves-effect waves-light #ffb300 amber darken-1'> <i class='material-icons'>mode_edit</i></a> </td>";
           echo "<td> <a href='#modal1' onclick='preencheId($id)' class='btn-floating waves-effect waves-light#ffb300 amber darken-1 modal-trigger'> <i class='material-icons'>delete</i></a> </td>";
 
           echo "</tr>";
