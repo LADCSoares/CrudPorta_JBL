@@ -3,41 +3,74 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Formulario de Contacto</title>
+  <title>Cadastrar Porta</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Inconsolata">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+     .font2 {
+       font-family: "Merriweather", sans-serif;
+      }
+      .font1 {
+       font-family: "Inconsolata", sans-serif;
+      }
+    .centro{
+      margin-left: 900px;
+    }
+
+    .logo1{
+      margin-left: 200px;
+    }
+    .logo2{
+      margin-right: 100px;
+    }
+  </style>
 </head>
 
 <body>
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper brown font2">
+        <a href="#!" class="brand-logo logo1">TudoPortas.com</a>
+        <ul class="right hide-on-med-and-down logo2">
+          <li><a href="crudPorta.php">Portas</a></li>
+          
+          <li><a href="badges.html">Maçanetas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <br><br><br><br><br>
 
+  <i class="material-icons prefix large centro">door_front</i>
   <section class="container">
     <div class="row">
-      <h3 class="center-align"> Cadastrar Porta </h3>
+
+      <h3 class="center-align font2"> Cadastrar Porta </h3>
       <article class="col s6 offset-s3">
         <form method="POST" action="cadastrarPorta.php">
           <div class="input-field">
-            <i class="material-icons prefix">perm_identity</i>
+            <i class="material-icons prefix">palette</i>
             <label for="cor">Cor </label>
             <input type="text" name="cor" required>
           </div>
 
           <div class="input-field">
-            <i class="material-icons prefix ">email</i>
+            <i class="material-icons prefix ">create</i>
             <label for="modelo">Modelo</label>
             <input type="text" name="modelo" required>
           </div>
 
           <div class="input-field">
-            <i class="material-icons prefix">person_pin</i>
+            <i class="material-icons prefix">attach_money</i>
             <label for="valor">Valor</label>
             <input type="number" name="valor" required>
           </div>
 
 
           <p class="center-align">
-            <button class="waves-effect waves-light btn #ffab00 amber accent-4" type="submit"><i class="material-icons right">send</i> Cadastrar </button>
+            <button class="waves-effect waves-light btn brown" type="submit"><i class="material-icons right">send</i> Cadastrar </button>
           </p>
 
         </form>
@@ -51,10 +84,10 @@
   </form>
 
   <main class="container">
-    <h1> Porta </h1>
+    <h2 class="font2"> Porta </h2>
 
 
-    <table class="bordered highlight responsive-table">
+    <table class="bordered highlight responsive-table font1">
       <thead>
         <tr>
           <th>ID</th>
@@ -84,8 +117,8 @@
           echo "<td>" . $modelo . "</td>";
           echo "<td>" . $valor . "</td>";
 
-          echo "<td>  <a href= 'formAtualPorta.php?id=$id' class='btn-floating waves-effect waves-light #ffb300 amber darken-1'> <i class='material-icons'>mode_edit</i></a> </td>";
-          echo "<td> <a href='#modal1' onclick='preencheId($id)' class='btn-floating waves-effect waves-light#ffb300 amber darken-1 modal-trigger'> <i class='material-icons'>delete</i></a> </td>";
+          echo "<td>  <a href= 'formAtualPorta.php?id=$id' class='btn-floating waves-effect waves-light brown'> <i class='material-icons'>mode_edit</i></a> </td>";
+          echo "<td> <a href='#modal1' onclick='preencheId($id)' class='btn-floating waves-effect waves-light#ffb300 brown modal-trigger'> <i class='material-icons'>delete</i></a> </td>";
 
           echo "</tr>";
         }
